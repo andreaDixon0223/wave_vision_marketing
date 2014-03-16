@@ -1,4 +1,72 @@
 <% provide(:title, 'Careers') %>
 
-<h1>StaticPages#careers</h1>
-<p>Find me in app/views/static_pages/careers.html.erb</p>
+
+
+<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag "slide-01.jpg" %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Career Opportunities with <%= @company_name %></h1>
+              <p class="lead">“Success consists of going from failure to failure without loss of enthusiasm. ” ― Winston Churchill</p>
+              <a class="btn btn-large btn-primary" href="#">Apply Today!</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+     
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>The Client</h2>
+          <p>Seven Nation Solutions is a Houston-based marketing firm that specializes at In-Store Marketing programs for our clients’ products and services. Seven Nation Solutions was created to acquire and retain customers in a personalized manner for all types of companies.</p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Experience Level</h2>
+          <p>Whether you’re right out of school or looking for something more out of your career, the Management Training Program will put you in a position to succeed immediately. You’ll learn how to run a million-dollar business, maximize profits and motivate a team of professionals, while having fun along the way..</p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Management</h2>
+          <p>This is where thousands of successful careers are launched – including our current CEO. Nearly all of our employees start in this program. You will learn our business from the inside out – taking care of customers, developing marketing plans and working with an energetic team of professionals. You’ll see just how much influence you can have on our future and on your own. As you progress through the program, you’ll see many more career options open to you.</p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-chrome.png">
+        <h2 class="featurette-heading">Take Advantage of the Opportunity… </h2>
+        <p class="lead">Very seldom do we find the opportunity that allows us to climb the ladder of success by working hard and being rewarded accordingly for it. This is that OPPORTUNITY! Don’t miss the chance to achieve your goals and aspirations for the future. We will review all applications submitted, no matter the experience level you have. Are you ready? Are you driven? determined? Excited about attaining goals? How fast will you climb the ladder?</p>
+        <%= link_to "Join our team now", "#" , :class => "btn btn-large btn-primary" %>
+      </div>
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+
+     <%= render "footer" %>
+
+
+
+
