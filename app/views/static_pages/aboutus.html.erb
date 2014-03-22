@@ -6,12 +6,14 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <%= image_tag "slide-01.jpg" %>
+          <%= image_tag "city.jpg" %>
           <div class="container">
             <div class="carousel-caption">
-              <h1>About <%= @company_name %></h1>
+              <h1>About <%= @company.name %></h1>
               <p class="lead">“The way to get started is to quit talking and begin doing. ” ― Walt Disney Company</p>
-              <a class="btn btn-large btn-primary" href="#">Apply Today!</a>
+
+              <%= link_to "Apply Today!",	apply_path, :class => "btn btn-large btn-primary"  %>
+
             </div>
           </div>
         </div>
@@ -31,19 +33,19 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
+          <%=image_tag "whatWeDo.jpg", :class => "img-circle" %>
           <h2>What We Do</h2>
-          <p>Seven Nation Solutions is a marketing firm that specializes in marketing programs for our clients’ products and services. The client base for Seven Nation Solutions has expanded to leaders in Satellite Television and Consumer Electronics. With the unveiling of our solidified and effective marketing program in the prestigious city of Houston, TX, Seven Nation Solutions has developed an undeniably powerful presence in some of the world’s largest chain retailers in a short amount time.</p>
+          <p><%= @company.name %> is a marketing firm that specializes in marketing programs for our clients’ products and services. The client base for <%= @company.name %> has expanded to leaders in Satellite Television and Consumer Electronics. With the unveiling of our solidified and effective marketing program in the prestigious city of <%= @company.city %>, <%= @company.st %>, <%= @company.name %> has developed an undeniably powerful presence in some of the world’s largest chain retailers in a short amount time.</p>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Seven Nation Values</h2>
+          <%=image_tag "values.jpg", :class => "img-circle" %>
+          <h2><%= @company.name %> Values</h2>
           <p>Fundamental values have been solidified into our business culture through various different backgrounds and experience from the founders of our business.  These experiences come from several distinctive backgrounds of Sports Management, Military Background, Coaching, Personal Training, Business Management, Entrepreneurs, Accountants, Financial Advisers, and several other respective fields which we are proud to say make up the potent values of our company. These values have been implemented and structured into a Business/Management Development Program that has built and shaped our company to the prestigious and opportunistic company that it is today.</p>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
+          <%=image_tag "future.jpg", :class => "img-circle" %>
           <h2>The Future</h2>
-          <p>By taking advantage of Seven Nation Solutions Business/Management training and opportunities for professional development, even those with limited work experience can build personal and professional skills that will last a lifetime. The future is bright and consistent at Seven Nation Solutions for individuals who are team players, creative thinkers and self starters who are goal and detail-oriented and have an affinity for working with people. Most openings require no experience and are considered entry level.</p>
+          <p>By taking advantage of <%= @company.name %> Business/Management training and opportunities for professional development, even those with limited work experience can build personal and professional skills that will last a lifetime. The future is bright and consistent at <%= @company.name %> for individuals who are team players, creative thinkers and self starters who are goal and detail-oriented and have an affinity for working with people. Most openings require no experience and are considered entry level.</p>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
 
@@ -57,13 +59,15 @@
         <h2 class="featurette-heading">The Industry Scope of our Clients… </h2>
         <h3><span class="muted">The Client’s Role</span></h3>
         <p class="lead">Our Success is attributed to our clients. Our strong client base allows us to create a substantial opportunity for individuals willing to work hard to reach their goals.</p>
-        <%= link_to "Click here to learn more", "#" %>
+        <%= link_to "Click here to learn more", services_path %>
       </div>
 
 
 
       <!-- /END THE FEATURETTES -->
 
+
+      <%= render "digitalPresence" %>
 
      <%= render "footer" %>
 

@@ -1,0 +1,62 @@
+<% provide(:title, 'Contact') %>
+
+<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag "slide-01.jpg" %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Apply Online with <%= @company.name %></h1>
+              <p class="lead">“Coming together is a beginning; keeping together is progress; working together is success.” ― Henry Ford</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+     
+    </div><!-- /.carousel -->
+
+
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <p class="lead">Please use the form below to contact us by email:</p>
+
+
+<%= form_for @message, :url => contact_path do |form| %>
+  <fieldset class="fields">
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+    
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email %>
+    </div>
+    <div class="field">
+      <%= form.label :phone_number %>
+      <%= form.text_field :phone_number %>
+    </div>
+    
+    <div class="field">
+      <%= form.label "Message or Question:" %>
+      <%= form.text_area :body %>
+    </div>
+  </fieldset>
+  
+  <fieldset class="actions">
+    <%= form.submit "Send", :class => "btn btn-large btn-primary" %>
+  </fieldset>
+<% end %>
+
+<%= render "static_pages/digitalPresence" %>
+
+
+<%= render "static_pages/footer" %>

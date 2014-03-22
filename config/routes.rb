@@ -1,10 +1,21 @@
 WaveVisionMarketing::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/aboutus"
-  get "static_pages/services"
-  get "static_pages/careers"
-  get "static_pages/apply"
-  get "static_pages/contact"
+ 
+  root to: 'static_pages#home'
+
+  match '/aboutus',   to: 'static_pages#aboutus'
+  match '/services',  to: 'static_pages#services'
+  match '/careers',   to: 'static_pages#careers'
+  # match '/apply',     to: 'static_pages#apply'
+  # match '/contact',    to: 'static_pages#contact'
+  match '/new_applicant',    to: 'static_pages#new_applicant'
+  match '/questions',    to: 'static_pages#questions'
+
+  match '/contact' => 'contact#new', :as => 'contact', :via => :get
+  match '/contact' => 'contact#create', :as => 'contact', :via => :post
+
+  match '/apply' => 'apply#new', :as => 'apply', :via => :get
+  match '/apply' => 'apply#create', :as => 'apply', :via => :post
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

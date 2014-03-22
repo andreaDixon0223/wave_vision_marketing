@@ -1,4 +1,84 @@
 <% provide(:title, 'Services') %>
 
-<h1>StaticPages#services</h1>
-<p>Find me in app/views/static_pages/services.html.erb</p>
+<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= image_tag "city.jpg" %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1><%= @company.name %> Services</h1>
+              <p class="lead">“In order to succeed, your desire for success should be greater than your fear of failure. ” ― Bill Cosby</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+     
+    </div><!-- /.carousel -->
+
+
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <h2 class="featurette-heading">What we do </h2>
+        <%= image_tag "servicescol.png", :style => "float:right;" %>
+        <p class="lead"><%= @company.name %> was created to acquire and retain customers in a personalized manner for all types of companies. Today, we lead the nation in outsourced marketing and innovative marketing campaigns.  Client acquisition is one of the fastest growing trends in marketing these days. We set the standard for bringing suppliers and customers together in an easy going unobtrusive way.</p>
+
+        <p class="lead">We give the advertiser an opportunity to rise far above their competition with proven and measurable results. We take the campaigns to the next level and secure the consumer for the client directly.
+
+        <ul>
+        	<li>Professional Representatives</li>
+        	<li>Teamwork</li>
+        	<li>Leadership</li>
+        	<li>Mentorship</li>
+        	<li>Drive & Determination</li>
+        	<li>Focus on the Consumer</li>
+        	<li>Professional Campaigns</li>
+        	<li>Reaching Our Goals</li>
+        	<li>Success is at your fingertips</li>
+        </ul>
+        </p>
+      </div>
+
+      <div class="featurette">
+        <h2 class="featurette-heading">HOW IT WORKS </h2>
+        <p class="lead">
+
+        Our clients have specific fields of expertise in satellite TV services and the entertainment, technology and home improvement industries. We feel we can complement their niche with a superior marketing and sales team to keep them busy doing what they do best. With hundreds of representatives nationally, our one-on-one approach allows us to get personal with our clients’ customers..</p>
+        
+      </div>
+
+      <div class="featurette">
+        <h2 class="featurette-heading">OUR APPROACH </h2>
+        <p class="lead">Our in store approach within large retail venues allows us to target shoppers who may already be in a ‘spending’ mind frame already.  We are able to market the product or service more effectively because of this. Allowing the consumer to interact with the representatives helps to create an energy that attracts attention. The overwhelming response has been to the real world value and savings we are able to offer the consumer.</p>
+        
+      </div>
+
+      <div class="featurette">
+        <h2 class="featurette-heading">Why Our System Works… </h2>
+        <p class="lead">The client has always been our top priority, as they are the reason for our tremendous success and growth opportunity. We are constantly evolving as we grow as a company and an organization across the country.</p>
+        
+      </div>
+
+      <div class="featurette">
+        <h2 class="featurette-heading">LOOKING FOR THE RIGHT CAREER OPPORTUNITY FOR YOU? </h2>
+        <p class="lead">Our company seeks candidates with entrepreneurial spirit who are excited to start with our company at the entry level and grow into an upper level management position. Over the course of the last year we have expanded out client portfolio and grown into new divisions and locations. Our goal is for driven and self-motivated candidates to complete our training program and ultimately oversee new programs, markets, and locations on regional and national levels…</p>
+
+        <%= link_to "Apply Today", apply_path,  class: "btn btn-large btn-primary btn_custom" %>
+        
+      </div>
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+      <%= render "digitalPresence" %>
+
+
+     <%= render "footer" %>

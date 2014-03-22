@@ -4,12 +4,12 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <%= image_tag "slide-01.jpg" %>
+          <%= image_tag "slide-01.jpg"%>
           <div class="container">
             <div class="carousel-caption">
-              <h1>Welcome to <%= @company_name %></h1>
-              <p class="lead">Seven Nation Solutions lives by a company philosophy of loyalty to our people and results for our clients. Our success is built upon standards of only promoting from within, leading by example at all times, and working as hard for our clients as we would for ourselves. Seven Nation Solutions strives to be the perfect combination of entrepreneurial spirit, superb client service, and successful business professionals.</p>
-              <a class="btn btn-large btn-primary" href="#">Apply Today!</a>
+              <h1>Welcome to <%= @company.name %></h1>
+              <p class="lead">The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack of will." - Vince Lombardi</p>
+              <%= link_to "Apply Today!",	apply_path, :class => "btn btn-large btn-primary btn_custom  "  %>
             </div>
           </div>
         </div>
@@ -18,8 +18,9 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Who We Are</h1>
-              <p class="lead">Seven Nation Solutions is a marketing firm that specializes in marketing programs for our clients’ products and services. The client base for Seven Nation Solutions has expanded to leaders in Satellite Television and Consumer Electronics...</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+              <p class="lead"><%= @company.name %> is a marketing firm that specializes in marketing programs for our clients’ products and services. The client base for <%= @company.name %> has expanded to leaders in Satellite Television and Consumer Electronics...</p>
+              <%= link_to "Learn more",	aboutus_path, :class => "btn btn-large btn-primary btn_custom "  %>
+
             </div>
           </div>
         </div>
@@ -29,7 +30,7 @@
             <div class="carousel-caption">
               <h1>Careers</h1>
               <p class="lead">We seek candidates with entrepreneurial spirit who are excited to start with our company at the entry level and grow into an upper level management position. Over the course of the last year we have expanded our portfolio and grown into new locations...</p>
-              <a class="btn btn-large btn-primary" href="#">Apply Today</a>
+              <%= link_to "Apply Today!",	apply_path, :class => "btn btn-large btn-primary btn_custom "  %>
             </div>
           </div>
         </div>
@@ -38,8 +39,9 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>CLIENT PORTFOLIO</h1>
-              <p class="lead">Seven Nation Solutions was created to acquire and retain customers in a personalized manner for all types of companies. Today, we lead the nation in outsourced marketing and innovative marketing campaigns...</p>
-              <a class="btn btn-large btn-primary" href="#">Services</a>
+              <p class="lead"><%= @company.name %> was created to acquire and retain customers in a personalized manner for all types of companies. Today, we lead the nation in outsourced marketing and innovative marketing campaigns...</p>
+              <%= link_to "Services",	services_path, :class => "btn btn-large btn-primary btn_custom "  %>
+              
             </div>
           </div>
         </div>
@@ -56,30 +58,22 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
+    <!-- START THE FEATURETTES -->
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-      </div><!-- /.row -->
+      <hr class="featurette-divider">
 
+      <div class="featurette">
+        <h2 class="featurette-heading">Welcome to <%= @company.name %></h2>
+        <h3><span class="muted">“A successful man is one who can lay a firm foundation with the bricks others have thrown at him. -David Brinkley ”</span></h3>
+        <p class="lead"><%= @company.name %> lives by a company philosophy of loyalty to our people and results for our clients. Our success is built upon standards of only promoting from within, leading by example at all times, and working as hard for our clients as we would for ourselves. <%= @company.name %> strives to be the perfect combination of entrepreneurial spirit, superb client service, and successful business professionals.</p>
+        <%= link_to "Click here to learn more", services_path %>
+      </div>
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+      <%= render "digitalPresence" %>
 
      <%= render "footer" %>
 
