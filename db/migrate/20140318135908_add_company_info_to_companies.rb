@@ -7,6 +7,6 @@ class AddCompanyInfoToCompanies < ActiveRecord::Migration
     add_column :companies, :st, :string
     add_column :companies, :zip, :string
 
-    current_companies = Companies.create!( :name => "Wave Vision Marketing", :address => "2028 N. Third Street", :city => "Flagstaff", :st => "AZ", :zip => "86004")
+    current_companies = Company.create!( :name => "Wave Vision Marketing", :address => "2028 N. Third Street", :city => "Flagstaff", :st => "AZ", :zip => "86004")
   end
 end
