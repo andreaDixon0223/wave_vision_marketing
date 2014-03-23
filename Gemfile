@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.0.0'
 gem 'gmaps4rails'
+gem "jquery-rails"
+gem 'twitter-bootstrap-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -29,7 +31,6 @@ group :assets do
 gem "less-rails"
 end
 
-gem 'jquery-rails'
 
 group :test do
 	gem 'capybara', '1.1.2'

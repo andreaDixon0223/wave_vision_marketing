@@ -21,39 +21,52 @@
 
 
       <!-- START THE FEATURETTES -->
+      
+      <% flash.each do |name, msg| %>
+         <% if msg.is_a?(String) %>
+         <div class="alert alert-dismissable alert-danger">
+            <%= content_tag :div, msg, :class => "flash_#{name}" %>
+          </div>
+        <% end %>
+        <% end %>
+        
 
       <hr class="featurette-divider">
+
+
 
       <div class="featurette">
         <p class="lead">Very seldom do we find the opportunity that allows us to climb the ladder of success by working hard and being rewarded accordingly for it. This is that OPPORTUNITY! Don’t miss the chance to achieve your goals and aspirations for the future. We will review all applications submitted, no matter the experience level you have. Are you ready? Are you driven? determined? Excited about attaining goals? How fast will you climb the ladder? Fill out the form below to apply with us now.</p>
 
         </div>
 
-        <%= form_for @message, :type => "apply", :url => contact_path do |form| %>
-          <fieldset class="fields">
+        
+
+        <%= form_for @message, :class => "form-horizontal", :url => apply_path do |form| %>
+          <fieldset class="form-group">
           <div class="field">
 
-            <%= form.label :name %>
+            <%= form.label :name, :class => "col-lg-2 control-label" %>
             <%= form.text_field :name%>
           </div>
     
-          <div class="field">
-            <%= form.label :email %>
+          <div class="form-group">
+            <%= form.label :email, :class => "col-lg-2 control-label" %>
             <%= form.text_field :email %>
           </div>
           
-          <div class="field">
-            <%= form.label :phone_number %>
+          <div class="form-group">
+            <%= form.label :phone_number, :class => "col-lg-2 control-label"  %>
             <%= form.text_field :phone_number %>
           </div>
     
-          <div class="field">
-            <%= form.label "Resume:" %>
+          <div class="form-group">
+            <%= form.label "Resume:", :class => "col-lg-2 control-label"  %>
             <%= form.text_area :body %>
           </div>
 
-          <div class="field">
-              <%= form.label "How did you hear about us?" %>
+          <div class="form-group">
+              <%= form.label "How did you hear about us?", :class => "col-lg-2 control-label"  %>
               <%= form.text_field :additional_information %>
           </div>
   </fieldset>
