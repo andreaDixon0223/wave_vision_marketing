@@ -29,7 +29,7 @@
 
         </div>
 
-        <%= form_for @message, :url => contact_path do |form| %>
+        <%= form_for @message, :type => "apply", :url => contact_path do |form| %>
           <fieldset class="fields">
           <div class="field">
 
@@ -59,7 +59,7 @@
   </fieldset>
   
   <fieldset class="actions">
-    <%= form.submit "Send", :class => "btn btn-large btn-primary" %>
+    <%= form.submit "Send", :class => "btn btn-large btn-primary btn_resize" %>
   </fieldset>
 <% end %>
 

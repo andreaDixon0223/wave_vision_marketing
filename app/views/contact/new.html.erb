@@ -5,10 +5,10 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <%= image_tag "slide-01.jpg" %>
+          <%= image_tag "city.jpg" %>
           <div class="container">
             <div class="carousel-caption">
-              <h1>Apply Online with <%= @company.name %></h1>
+              <h1>Contact <%= @company.name %></h1>
               <p class="lead">“Coming together is a beginning; keeping together is progress; working together is success.” ― Henry Ford</p>
             </div>
           </div>
@@ -29,7 +29,7 @@
         <p class="lead">Please use the form below to contact us by email:</p>
 
 
-<%= form_for @message, :url => contact_path do |form| %>
+<%= form_for @message, :type => "contact", :url => contact_path do |form| %>
   <fieldset class="fields">
     <div class="field">
       <%= form.label :name %>
@@ -52,7 +52,7 @@
   </fieldset>
   
   <fieldset class="actions">
-    <%= form.submit "Send", :class => "btn btn-large btn-primary" %>
+    <%= form.submit "Send", :class => "btn btn-large btn-primary btn_resize" %>
   </fieldset>
 <% end %>
 

@@ -15,7 +15,17 @@
       color: #5a5a5a;
     }
 
-    
+    input[type="text"] {
+    width: 75% !important;
+	}
+
+	input, textarea, .uneditable-input {
+    width: 75% !important;
+	}
+
+	.btn_resize {
+		width: 150px !important;
+	}
 
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
