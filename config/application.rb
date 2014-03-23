@@ -66,17 +66,17 @@ module WaveVisionMarketing
     config.assets.version = '1.0'
 
     config.action_mailer.smtp_settings = {
-     :address              => "smtp.gmail.com",
-     :port                 => 587,
-     :domain               => "gmail.com",
-     :user_name            => "andrea.coa.dixon@gmail.com",
-     :password             => "05071950",
+     :address              => "smtpout.secureserver.net",
+     :port                 => 80,
+     :domain               => "www.wavevisionmarketing.com",
+     :user_name            => "admin@WaveVisionMarketing.com",
+     :password             => "password1!",
      :authentication       => :plain,
-     :enable_starttls_auto => true
+     # :enable_starttls_auto => true
     }
 
     config.action_mailer.default_url_options = {
-    :host => "WaveVisionMarketing.herokuapp.com"
+    :host => "wavevisionmarketing.com"
     }
   end
 end
