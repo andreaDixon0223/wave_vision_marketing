@@ -5,6 +5,9 @@ gem 'bootstrap-sass', '2.0.0'
 gem 'gmaps4rails'
 gem "jquery-rails"
 gem "heroku"
+gem 'mail'
+gem 'postmark'
+gem 'postmark-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

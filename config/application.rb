@@ -68,18 +68,21 @@ module WaveVisionMarketing
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.action_mailer.smtp_settings = {
-     :address              => "smtpout.secureserver.net",
-     :port                 => 80,
-     :domain               => "www.wavevisionmarketing.com",
-     :user_name            => "admin@WaveVisionMarketing.com",
-     :password             => "password1!",
-     :authentication       => :plain,
-     # :enable_starttls_auto => true
-    }
+    config.action_mailer.delivery_method   = :postmark
+    config.action_mailer.postmark_settings = { :api_key => ENV['POSTMARK_API_KEY'] }
 
-    config.action_mailer.default_url_options = {
-    :host => "wavevisionmarketing.com"
-    }
+    # config.action_mailer.smtp_settings = {
+    #  :address              => "smtpout.secureserver.net",
+    #  :port                 => 80,
+    #  :domain               => "www.wavevisionmarketing.com",
+    #  :user_name            => "admin@WaveVisionMarketing.com",
+    #  :password             => "password1!",
+    #  :authentication       => :plain,
+    #  # :enable_starttls_auto => true
+    # }
+
+    # config.action_mailer.default_url_options = {
+    # :host => "wavevisionmarketing.com"
+    # }
   end
 end
