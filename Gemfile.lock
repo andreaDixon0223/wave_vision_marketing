@@ -186,9 +186,7 @@ DEPENDENCIES
   heroku
   jquery-rails
   less-rails
-  mail
   pg (= 0.12.2)
-  postmark
   postmark-rails
   rails (= 3.2.13)
   rspec-rails (= 2.9.0)
