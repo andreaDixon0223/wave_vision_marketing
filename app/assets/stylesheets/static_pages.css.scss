@@ -21,7 +21,11 @@
 
 	input, textarea, .uneditable-input {
     	width: 75% !important;
-    	color: black !important;
+    	
+	}
+
+	input[type="textarea"] {
+		color: black !important;
 	}
 
 	.btn_resize {
