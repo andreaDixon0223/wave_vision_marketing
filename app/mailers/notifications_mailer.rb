@@ -6,12 +6,11 @@ class NotificationsMailer < ActionMailer::Base
     @message = message
     @company = Company.find_by_name("Wave Vision Marketing")
 
-    mail(
-      :subject => 'Did you know Postmark has a Heroku add-on?',
-      :to      => 'sheldon@bigbangtheory.com',
-      :from    => 'leonard@bigbangtheory.com',
-      :tag     => 'my-tag'
-    )
+    mail(:subject => "Questions" + @company.name,
+    	:to      => 'admin@wavevisionmarketing.com',
+      	:from    => 'admin@wavevisionmarketing.com',
+      	:tag     => 'my-tag'
+      	:body	 => @message.body)
   end
 
   
