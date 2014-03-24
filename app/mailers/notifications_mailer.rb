@@ -9,7 +9,7 @@ class NotificationsMailer < ActionMailer::Base
     mail(:subject => "Questions" + @company.name,
     	:to      => 'admin@wavevisionmarketing.com',
       	:from    => 'admin@wavevisionmarketing.com',
-      	:tag     => 'my-tag'
+      	:tag     => 'my-tag',
       	:body	 => @message.body)
   end
 
