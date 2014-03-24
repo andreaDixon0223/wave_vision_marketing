@@ -35,4 +35,5 @@ WaveVisionMarketing::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 
+  config.action_mailer.simple_postmark_settings = { api_key: 'POSTMARK_API_TEST', return_response: true }
 end
