@@ -3,7 +3,7 @@ WaveVisionMarketing::Application.configure do
 
 
   config.assets.precompile += %w( bootstrap.css )
-
+  
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -67,7 +67,4 @@ WaveVisionMarketing::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-
-  config.action_mailer.delivery_method = :simple_postmark
-  config.action_mailer.simple_postmark_settings = { api_key: 'e81b090b-6032-4b25-bec8-d7af725161a1' }
 end
