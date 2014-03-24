@@ -35,7 +35,7 @@
 	<%= @company.city %>, <%=@company.st%> <%=@company.zip.to_s %>
 	 
 	 <div><!-- google map-->
-  		<div id="map" style='width: 100%; height: 300px;'></div>
+  		<!-- <div id="map" style='width: 100%; height: 300px;'></div> -->
 	</div>
 </p>
 
@@ -45,18 +45,18 @@
 <!-- google map end-->
 
 <script type="text/javascript">
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  markers = handler.addMarkers([
-    {
-      lat: 35.208793,
-      lng: -111.614477,
-      "infowindow": "Wave-Vision Marketing - 2028 N. Third Street Flagstaff, AZ"
-    }
-  ]);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
+// handler = Gmaps.build('Google');
+// handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+//   markers = handler.addMarkers([
+//     {
+//       lat: 35.208793,
+//       lng: -111.614477,
+//       "infowindow": "Wave-Vision Marketing - 2028 N. Third Street Flagstaff, AZ"
+//     }
+//   ]);
+//   handler.bounds.extendWith(markers);
+//   handler.fitMapToBounds();
+// });
 
 
 </script>
