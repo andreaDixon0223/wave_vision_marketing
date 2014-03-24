@@ -68,6 +68,7 @@ WaveVisionMarketing::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.action_mailer.delivery_method = :simple_postmark
-  config.action_mailer.simple_postmark_settings = { api_key: 'e81b090b-6032-4b25-bec8-d7af725161a1' }
+  POSTMARK_API_KEY = "e81b090b-6032-4b25-bec8-d7af725161a1"
+  config.action_mailer.delivery_method = :postmark
+  config.action_mailer.postmark_settings = { :api_key => POSTMARK_API_KEY }
 end

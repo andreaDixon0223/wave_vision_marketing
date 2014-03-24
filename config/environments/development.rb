@@ -37,5 +37,17 @@ WaveVisionMarketing::Application.configure do
 
   
 
-  
+  POSTMARK_API_KEY = "e81b090b-6032-4b25-bec8-d7af725161a1"
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address => 'smtp.postmarkapp.com',
+      :port => 25,
+      :domain => 'www.wavevisionmarketing.com',
+      :user_name => POSTMARK_API_KEY,
+      :password => POSTMARK_API_KEY,
+      :authentication => 'plain',
+      :enable_starttls_auto => true 
+    }
+
+
 end
